@@ -31,7 +31,7 @@ html {
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', sans-serif !important;
   background: var(--bg-light);
   color: var(--text-main);
   font-size: var(--font-main);
@@ -72,13 +72,15 @@ img {
   gap: 40px;
 }
 
+/* NAVBAR MENU TYPOGRAPHY (Playfair Display 800) */
 .nav-links a {
+  font-family: 'Playfair Display', serif !important;
+  font-weight: 800 !important;
+  font-size: 15px; 
+  letter-spacing: 0.5px; 
+  text-transform: none; 
   color: #ffffff;
   text-decoration: none;
-  font-size: 13px;
-  font-weight: 500;
-  letter-spacing: 2px;
-  text-transform: uppercase;
   opacity: 0.5;
   transition: var(--transition);
   position: relative;
@@ -105,6 +107,15 @@ img {
 .nav-links a.active::after,
 .nav-links a:hover::after {
   width: 100%;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    gap: 18px;
+  }
+  .nav-links a {
+    font-size: 14px !important;
+  }
 }
 
 /* =====================================================
@@ -142,9 +153,9 @@ img {
 }
 
 .hero h1 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', serif !important;
+  font-weight: 800 !important;
   font-size: clamp(45px, 8vw, 90px);
-  font-weight: 800;
   letter-spacing: -2px;
   line-height: 1.1;
   margin-bottom: 25px;
@@ -154,7 +165,7 @@ img {
 }
 
 .hero h2 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', sans-serif !important;
   font-size: clamp(16px, 2.5vw, 24px);
   font-weight: 300;
   letter-spacing: 6px;
@@ -164,11 +175,11 @@ img {
 }
 
 .hero p {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Montserrat', sans-serif !important;
   font-size: var(--font-main);
-  font-weight: 300;
+  font-weight: 400;
   opacity: 0.6;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   text-transform: uppercase;
   max-width: 600px;
   margin: 0 auto;
@@ -212,6 +223,7 @@ img {
 }
 
 .editorial-badge {
+  font-family: 'Montserrat', sans-serif !important;
   font-size: 11px;
   font-weight: 600;
   color: var(--red);
@@ -222,9 +234,9 @@ img {
 }
 
 .editorial-about-header h1 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', serif !important;
+  font-weight: 800 !important;
   font-size: clamp(38px, 7vw, 56px);
-  font-weight: 800;
   letter-spacing: -1px;
   background: linear-gradient(to bottom, #ffffff 70%, rgba(255,255,255,0.4));
   -webkit-background-clip: text;
@@ -262,9 +274,9 @@ img {
 }
 
 .about-text-showcase p {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Montserrat', sans-serif !important;
   font-size: clamp(15px, 2vw, 17px);
-  line-height: 1.9;
+  line-height: 1.8;
   font-weight: 400;
   color: #333333;
   text-align: center;
@@ -333,19 +345,19 @@ img {
 }
 
 .works-header h1 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', serif !important;
+  font-weight: 800 !important;
   font-size: clamp(36px, 6vw, 56px);
-  font-weight: 800;
   letter-spacing: -1px;
   color: var(--dark);
   margin-bottom: 12px;
 }
 
 .works-header p {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Montserrat', sans-serif !important;
   color: var(--text-muted);
   font-size: var(--font-main);
-  letter-spacing: 3px;
+  letter-spacing: 2px;
   text-transform: uppercase;
   font-weight: 400;
 }
@@ -361,7 +373,7 @@ img {
 }
 
 .filter-item {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Montserrat', sans-serif !important;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 1.5px;
@@ -445,7 +457,7 @@ img {
 }
 
 .work-info h4 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', serif !important;
   font-size: 20px;
   font-weight: 600;
   color: #ffffff;
@@ -455,9 +467,9 @@ img {
 }
 
 .work-info span {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Montserrat', sans-serif !important;
   font-size: 12px;
-  font-weight: 400;
+  font-weight: 500;
   color: #c0c0c0;
   text-transform: uppercase;
   letter-spacing: 1.5px;
@@ -524,6 +536,7 @@ img {
 }
 
 .section-badge {
+  font-family: 'Montserrat', sans-serif !important;
   font-size: 11px;
   font-weight: 700;
   color: var(--red);
@@ -534,7 +547,7 @@ img {
 }
 
 .section-title-block h2 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', serif !important;
   font-size: clamp(28px, 4vw, 36px);
   font-weight: 800;
   color: var(--dark);
@@ -572,7 +585,7 @@ img {
 }
 
 .skill-text-box h4 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', sans-serif !important;
   font-size: var(--font-main);
   font-weight: 600;
   color: var(--dark);
@@ -581,6 +594,7 @@ img {
 }
 
 .skill-text-box p {
+  font-family: 'Montserrat', sans-serif !important;
   font-size: var(--font-main);
   color: var(--text-muted);
   line-height: 1.6;
@@ -632,9 +646,9 @@ img {
 }
 
 .flat-tool-card span {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Montserrat', sans-serif !important;
   font-size: var(--font-main);
-  font-weight: 600;
+  font-weight: 500;
   color: var(--text-main);
   transition: var(--transition);
 }
@@ -664,14 +678,16 @@ img {
 }
 
 .experience-head-center h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(30px, 5vw, 40px);
-  font-weight: 800;
+  font-family: 'Playfair Display', serif !important;
+  font-weight: 800 !important;
   color: var(--dark);
+  font-size: clamp(30px, 5vw, 40px);
+  letter-spacing: -1px;
   margin-bottom: 8px;
 }
 
 .experience-head-center p {
+  font-family: 'Montserrat', sans-serif !important;
   font-size: var(--font-main);
   color: var(--text-muted);
 }
@@ -710,6 +726,7 @@ img {
 }
 
 .timeline-date {
+  font-family: 'Montserrat', sans-serif !important;
   font-size: 12px;
   font-weight: 600;
   color: var(--red);
@@ -717,14 +734,14 @@ img {
 }
 
 .timeline-company {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', sans-serif !important;
   font-size: 18px;
   font-weight: 700;
   color: var(--dark);
 }
 
 .timeline-role {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', serif !important;
   font-size: 22px;
   font-weight: 700;
   color: var(--dark);
@@ -732,6 +749,7 @@ img {
 }
 
 .timeline-summary {
+  font-family: 'Montserrat', sans-serif !important;
   font-size: var(--font-main);
   color: #555;
   line-height: 1.6;
@@ -745,6 +763,7 @@ img {
 .timeline-bullets li {
   position: relative;
   padding-left: 20px;
+  font-family: 'Montserrat', sans-serif !important;
   font-size: var(--font-main);
   color: var(--text-muted);
   margin-bottom: 8px;
@@ -828,6 +847,7 @@ img {
     grid-template-columns: 1fr;
   }
 }
+
 /* =====================================================
    CINEMATIC MINIMALIST CONTACT DESIGN
 ===================================================== */
@@ -848,6 +868,7 @@ img {
 }
 
 .contact-badge {
+  font-family: 'Montserrat', sans-serif !important;
   font-size: 11px;
   font-weight: 600;
   color: var(--red);
@@ -858,25 +879,28 @@ img {
 }
 
 .contact-hero h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(42px, 8vw, 76px);
-  font-weight: 800;
+  font-family: 'Playfair Display', serif !important;
+  font-weight: 800 !important;
   line-height: 1.1;
-  letter-spacing: -2px;
   color: #ffffff;
   margin-bottom: 24px;
   background: linear-gradient(to bottom, #ffffff 70%, rgba(255,255,255,0.3));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+
+  /* DISAMAKAN PERSIS DENGAN .works-header.dark-variant h1 */
+  font-size: clamp(38px, 6vw, 56px) !important;
+  letter-spacing: -1px;
 }
 
 .contact-hero p {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Montserrat', sans-serif !important;
   font-size: clamp(14px, 2vw, 16px);
   color: #a0a0a0;
   line-height: 1.8;
-  font-weight: 300;
+  font-weight: 400;
   margin-bottom: 60px;
+  letter-spacing: 0.5px;
 }
 
 /* GRID KARTU KONTAK INTERAKTIF */
@@ -889,6 +913,7 @@ img {
 }
 
 .luxury-contact-card {
+  font-family: 'Montserrat', sans-serif !important;
   display: flex;
   align-items: center;
   background: rgba(255, 255, 255, 0.03);
@@ -914,7 +939,7 @@ img {
 }
 
 .contact-card-text h4 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', sans-serif !important;
   font-size: 15px;
   font-weight: 600;
   color: #ffffff;
@@ -922,10 +947,11 @@ img {
 }
 
 .contact-card-text span {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Montserrat', sans-serif !important;
   font-size: 12px;
   color: #888888;
   display: block;
+  font-weight: 400;
   transition: var(--transition);
 }
 
@@ -960,7 +986,6 @@ img {
   transform: translateX(0);
 }
 
-/* RESPONSIVE LAYOUT */
 @media (max-width: 550px) {
   .contact-hero {
     padding: 60px 20px;
@@ -972,16 +997,15 @@ img {
     font-size: 14px;
   }
 }
+
 /* =====================================================
    DARK SYSTEM FOR GALLERY CANVAS
 ===================================================== */
-/* Mengubah body khusus untuk halaman galeri gelap */
 .dark-page-body {
   background: radial-gradient(circle at center, var(--dark-gray) 0%, var(--dark) 100%) !important;
   color: #ffffff;
 }
 
-/* Penyesuaian Komponen Header Galeri */
 .works-header.dark-variant {
   background: transparent;
   padding: 100px 24px 20px;
@@ -989,9 +1013,9 @@ img {
 }
 
 .works-header.dark-variant h1 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', serif !important;
+  font-weight: 800 !important;
   font-size: clamp(38px, 6vw, 56px);
-  font-weight: 800;
   letter-spacing: -1px;
   margin-top: 6px;
   background: linear-gradient(to bottom, #ffffff 70%, rgba(255,255,255,0.3));
@@ -1000,13 +1024,14 @@ img {
 }
 
 .works-header.dark-variant p {
+  font-family: 'Montserrat', sans-serif !important;
   color: #888888;
   font-size: var(--font-main);
-  letter-spacing: 3px;
+  letter-spacing: 2px;
   text-transform: uppercase;
+  font-weight: 400;
 }
 
-/* Modifikasi Tombol Filter untuk Latar Belakang Gelap */
 .works-filter.dark-variant {
   margin-bottom: 60px;
 }
@@ -1026,10 +1051,9 @@ img {
   box-shadow: 0 10px 25px rgba(139, 30, 30, 0.35);
 }
 
-/* Pembaruan Border Kartu Portofolio */
 .dark-page-body .work-card {
   background: #050505;
-  border: 1px solid rgba(255, 255, 255, 0.04); /* Garis tepi tipis yang mewah */
+  border: 1px solid rgba(255, 255, 255, 0.04);
 }
 
 .dark-page-body .work-card:hover {
@@ -1037,7 +1061,6 @@ img {
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5), 0 10px 30px rgba(139, 30, 30, 0.15);
 }
 
-/* Penyesuaian Ikon Play Video */
 .dark-page-body .video-card::after {
   background: rgba(0, 0, 0, 0.5);
   border-color: rgba(255, 255, 255, 0.1);
