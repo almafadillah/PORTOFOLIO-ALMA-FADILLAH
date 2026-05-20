@@ -1,37 +1,36 @@
-const btns=document.querySelectorAll('.filter-btn');
-const cards=document.querySelectorAll('.work-card');
+document.addEventListener("DOMContentLoaded", function () {
+  const filterButtons = document.querySelectorAll(".filter-item");
+  const workCards = document.querySelectorAll(".work-card");
 
-btns.forEach(b=>{
-  b.onclick=()=>{
-    btns.forEach(x=>x.classList.remove('active'));
-    b.classList.add('active');
-    const f=b.dataset.filter;
-    cards.forEach(c=>{
-      c.style.display=(f==='all'||c.dataset.category===f)?'block':'none';
+  filterButtons.forEach((button) => {
+    button.addEventListener("click", function () {
+      // 1. Ubah status active tombol filter
+      filterButtons.forEach((btn) => btn.classList.remove("active"));
+      this.classList.add("active");
+
+      // 2. Ambil nilai filter kategori dari tombol
+      const filterValue = this.getAttribute("data-filter");
+
+      // 3. Proses penyaringan kartu karya
+      workCards.forEach((card) => {
+        const cardCategory = card.getAttribute("data-category");
+
+        if (filterValue === "all" || filterValue === cardCategory) {
+          // Tampilkan kartu dengan transisi halus
+          card.style.display = "block";
+          setTimeout(() => {
+            card.style.opacity = "1";
+            card.style.transform = "scale(1)";
+          }, 10);
+        } else {
+          // Sembunyikan kartu
+          card.style.opacity = "0";
+          card.style.transform = "scale(0.8)";
+          setTimeout(() => {
+            card.style.display = "none";
+          }, 400); // Sinkron dengan durasi CSS transition (0.6s)
+        }
+      });
     });
-  };
-});
-const filterButtons = document.querySelectorAll('.filter-item');
-const workCards = document.querySelectorAll('.work-card');
-
-filterButtons.forEach(button => {
-  button.addEventListener('click', () => {
-
-    // active state
-    filterButtons.forEach(btn => btn.classList.remove('active'));
-    button.classList.add('active');
-
-    const filter = button.getAttribute('data-filter');
-
-    workCards.forEach(card => {
-      const category = card.getAttribute('data-category');
-
-      if (filter === 'all' || category === filter) {
-        card.style.display = 'block';
-      } else {
-        card.style.display = 'none';
-      }
-    });
-
   });
 });
